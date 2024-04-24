@@ -1,26 +1,106 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>portfolio</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="head">
-        <img src="G.png" width="" height="66">
-        <ul>
-            <li><a href="" class="c">Accueil</li>
-            <li><a href="" class="c">Skills</li>
-            <li><a href="" class="c">Project section</li>
-            <li><a href="" class="c">Resume section</li>
-            <li><a href="" class="c">Contact Section</li>
-            <li><a href="" class="c">Footer</li>
-        </ul>
-    </div>
-    <div class="boddy">
-        <h1>Abdellah ghbal</h1>
-    </div>
-    <div class="foot">
-        <h1>foot</h1>
-    </div>
-</body>
-</html>
+    <html>
+        <head>
+        <title>portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="animation.css">
+        </head>
+        <body>
+            <div class="head">
+                <img src="New Project.png" width="" height="60" style=" margin-right: 360px; margin-top: 15px;">
+                <ul>
+                    <li><a href="" class="c">Accueil</a></li>
+                    <li><a href="" class="c">Skills</a></li>
+                    <li><a href="" class="c">Project section</a></li>
+                    <li><a href="" class="c">Resume section</a></li>
+                    <li><a href="" class="c">Contact Section</a></li>
+                    <li><a href="" class="c">Footer</a></li>
+                </ul>
+            </div>
+            <div class="boddy">
+                <div class="title">
+                    <h1><span class="c2">HEY I AM</span> ABDELLAH AGHBAL</h1>
+                    <h3><span class="c3" >I am a</span> Web Developer</h3>
+                </div>
+                <div class="background">
+                    <!-- <img
+                        src="me.png"
+                        alt=""
+                        class="image-background"> -->
+                    <p id="string">
+                        
+                    </p>
+                    </div>
+            </div>
+            <!-- <div class="buble">
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:29;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:29;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:29;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:29;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:16;"></span>
+            </div>  -->
+        </body>
+        <script>
+            let binary = ""
+            for (let i = 0; i < 21000; i++){
+                binary += Math.floor(Math.random() * 2) % 2 == 0? '0' : '1';
+                if (i % 200 == 0){
+                    binary += ' ';
+                }
+            }
+            let s = binary;
+            let rand = 100;
+            console.log(binary);
+            setInterval(
+                () => {
+                const ct = ["0","1"];
+                for (let i = 0; i < rand; i++){
+
+                    let index = Math.floor(Math.random() * s.length);
+                    var newstr = s.slice(0, index);
+                    newstr += ct[Math.floor(Math.random() * ct.length)];
+                    if (s[index] == ' '){
+                        newstr += ' ';
+                        index++;
+                    }
+                    newstr += s.slice(index + 1);
+                    const element = document.getElementById('string');
+                    s = newstr;
+                    if (element){
+                        element.innerHTML = newstr;
+                    }
+                    console.log(newstr.length)
+                }
+        }
+            ,1)
+        </script>
+    </html>

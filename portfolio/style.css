@@ -5,44 +5,39 @@
     font-weight: normal;
     font-style: normal;
 }
-.head, .body, .foot
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+@keyframes animateText {
+    from { opacity: 0; transform: translateY(20px); }  
+    to { opacity: 1; transform: translateY(0); }   
+  }
+
+  
+
+head, body
 {
-    padding: 10px;
-    /* border: 1px solid blue; */
-    /* margin-bottom: 10px; */
-}
-
-
-
-.head {
-    background-color: black;
+    overflow: hidden;
     font-family: RobotoCondensed;
-    background-image: url(ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
-    background: linear-gradient(transparent, #020202), url("ales-nesetril-Im7lZjxeLhg-unsplash.jpg") no-repeat center;
-    background-position: center;
-    background-size: cover;
-    height: 100px;
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    right: 0; */
 }
-body{
-    width: 100%;
-    height: 100%;
+
+.title{
+    position: absolute;
+    top: 30%;
     margin: auto;
+    width: 100%;
+    z-index: 100;
 }
 
 .boddy{
-    background-color:black;
-    min-height: 100vh;
+    font-family: "Inter", sans-serif;;
+    font-weight: lighter;
+    height: calc(100vh - 80px);
+	margin: 0;
+	background: #000;
     width: 100%;
-}
-
-.foot{
-    background-color: black;
-    height: 100px;
-    width: 100%;
+    margin: 0;
 }
 
 ul{
@@ -59,24 +54,71 @@ li{
     padding: 15px;
     margin: 0px;
     font-size: 20px;
-    /* color: white; */
-    
 }
+.background {
+    width: 100%;
+    height: 100%;
+    position: relative; 
+	overflow: hidden;
+    background: linear-gradient(transparent, #000000), url("me.png") no-repeat center content-box;
+    background-size: cover;
+    /* filter: contrast(80%); */
+    line-height: 0;
+}
+
+/* .image-background{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: linear-gradient(transparent, #020202);;
+	filter: contrast(80%);
+} */
+
+p {
+    line-height: 1;
+	text-align: justify;
+	padding: .18vw;
+	margin-top: 0;
+	font-size: 1.76vw;
+	color: #fff;
+	background: #000;
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+    opacity: 0.6;
+}
+
 
 li:hover {
     scale: 1.2;
     color:rgb(255, 140, 0);
     transition: all;
-    animation-delay: 1s;
+    animation-delay: 100ms;
     animation-duration: 100ms;
-    /* translate: 2px -2px; */
 }
 
 .boddy h1{
-    padding: 100px;
-    font-size: xx-large;
+    margin: auto;
+    font-size: 60px;
     color:rgb(255, 140, 0);
     text-align: center;
+    animation: animateText 2s ease-in-out;
+}
+.c2{
+    color: white;
+    font-size: 40px;
+}
+
+
+.boddy h3{
+    color: white;
+    text-align: center;
+    animation: animateText 2.5s ease-in-out;
+}
+.c3{
+    color: rgb(255, 140, 0);
 }
 
 a{
@@ -85,7 +127,4 @@ a{
 
 .c{
     color: white;
-}
-.c:hover{
-    color: rgb(255, 140, 0)
 }
