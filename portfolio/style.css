@@ -23,6 +23,17 @@
     from, to { border-color: transparent }
     50% { border-color: orange; }
   }
+  @keyframes bounce {
+    0%  {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);    
+    }
+  }
+  ​
+  
   
 head, body
 {
@@ -63,16 +74,17 @@ li{
     padding: 15px;
     margin: 0px;
     font-size: 20px;
+    user-select: none;
 }
 .background {
     width: 100%;
     height: 100%;
     position: relative; 
 	overflow: hidden;
-    background: linear-gradient(transparent, #000000), url("img/me.png") no-repeat center content-box;
+    background: linear-gradient(#000 , transparent, #000000), url("img/me.png") no-repeat center content-box;
     background-size: cover;
-
     line-height: 0;
+    translate: 25% 0;
 }
 
 
@@ -90,10 +102,10 @@ p {
 	width: 100%;
 	height: 100%;
     opacity: 0.6;
+    user-select: none;
 }
 
-
-li:hover {
+.head a:hover {
     scale: 1.2;
     color:rgb(255, 140, 0);
     transition: all;
@@ -102,6 +114,7 @@ li:hover {
 }
 
 .boddy h1{
+    font-family: RobotoCondensed;
     overflow: hidden;
     border-right: .15em solid orange;
     white-space: nowrap;
@@ -137,4 +150,31 @@ a{
 
 .c{
     color: white;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    height: 100%;
+    color: rgb(189, 189, 189);
+    text-align: justify;
+}
+
+h6 {
+    position: absolute;
+    text-align: justify;
+    z-index: 999;
+    color: rgb(195, 195, 195);
+    left: 0;
+    margin-left: 50px;
+    padding-left: 10px;
+    width: 50%;
+    font-size: 20px;
+    animation: bounce 1s;
+    animation-iteration-count: 1;
+    transition: all;
+    border-left: 2px solid #fff;
 }
