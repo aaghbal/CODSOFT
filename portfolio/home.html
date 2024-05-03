@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        <title>portfolio</title>
+        <link rel="stylesheet" href="homestyle.css">
+        </head>
+        <body>
+            <div class="head">
+                <img src="img/New Project.png" width="" height="60" style=" margin-right: 360px; margin-top: 15px;">
+                <ul>
+                    <li><a href="home.html" class="c">Home</a></li>
+                    <li><a href="skills.html" class="c">Skills</a></li>
+                    <li><a href="projects.html" class="c">Project section</a></li>
+                    <li><a href="" class="c">Resume section</a></li>
+                    <li><a href="" class="c">Contact Section</a></li>
+                    <li><a href="" class="c">Footer</a></li>
+                </ul>
+            </div>
+            <div class="boddy">
+                <div class="title">
+                    <h1><span class="c2">HEY I AM</span> ABDELLAH AGHBAL</h1>
+                    <h3><span class="c3" >I'm a</span> Web Developer</h3>
+                </div>
+                <div class="background">
+                    <p id="string"> 
+                    </p>
+                </div>
+                <h6>
+                    I'm a passionate <span class="c3" >web developer</span> with a 
+                    knack for crafting user-friendly and
+                    visually stunning web experiences with
+                    <span class="skl">CSS, HTML, javascript </span>, I'm also well-versed in
+                    <span class="skl">C, C++, UX/UI design.</span> 
+                </h6>
+            </div>
+        </body>
+        <script>
+            let binary = ""
+            for (let i = 0; i < 41000; i++){
+                binary += Math.floor(Math.random() * 2) % 2 == 0? '0' : '1';
+                if (i % 200 == 0){
+                    binary += ' ';
+                }
+            }
+            let s = binary;
+            let rand = 200;
+            console.log(binary);
+            setInterval(
+                () => {
+                const ct = ["0","1"];
+                for (let i = 0; i < rand; i++){
+
+                    let index = Math.floor(Math.random() * s.length);
+                    var newstr = s.slice(0, index);
+                    newstr += ct[Math.floor(Math.random() * ct.length)];
+                    if (s[index] == ' '){
+                        newstr += ' ';
+                        index++;
+                    }
+                    newstr += s.slice(index + 1);
+                    const element = document.getElementById('string');
+                    s = newstr;
+                    if (element){
+                        element.innerHTML = newstr;
+                    }
+                    console.log(newstr.length)
+                }
+        }
+            ,1)
+        </script>
+    </html>

@@ -1,0 +1,189 @@
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url('RobotoCondensed.ttf'), format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+@keyframes animateText {
+    from { opacity: 0; transform: translateY(20px); }  
+    to { opacity: 1; transform: translateY(0); }   
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  @keyframes fadeIn {
+    0%  {
+        transform: translateX(-100%);
+        visibility: hidden;
+      }
+    100% {
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        visibility: visible;
+    }
+}
+  ​
+  
+  
+head, body
+{
+    overflow: hidden;
+    font-family: RobotoCondensed;
+    background: black;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.title{
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    z-index: 100;
+}
+
+.boddy{
+    font-family: "Inter", sans-serif;;
+    font-weight: lighter;
+    height: calc(100vh - 80px);
+	margin: 0;
+	background: #000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ul{
+    float: right;
+    list-style: none;
+}
+
+li{
+    float: left;
+    padding: 15px;
+    margin: 0px;
+    font-size: 20px;
+    user-select: none;
+}
+.background {
+    width: 100%;
+    height: 100%;
+    position: relative; 
+	overflow: hidden;
+    background: linear-gradient(#000 , transparent, #000000), url("img/me.png") no-repeat center content-box;
+    background-size: cover;
+    line-height: 0;
+    translate: 25% 0;
+}
+
+
+p {
+    line-height: 1;
+	text-align: justify;
+	padding: .18vw;
+	margin-top: 0;
+	font-size: 1.76vw;
+	color: #fff;
+	background: #000;
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+    opacity: 0.6;
+    user-select: none;
+}
+
+.head a:hover {
+    scale: 1.2;
+    color:rgb(255, 140, 0);
+    transition: all;
+    animation-delay: 100ms;
+    animation-duration: 100ms;
+}
+
+.boddy h1{
+    font-family: RobotoCondensed;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+    margin: auto;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+.c2{
+    color: white;
+    font-size: 40px;
+}
+
+
+.boddy h3{
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    animation: animateText 8s ease-in-out;
+}
+.c3{
+    color: rgb(255, 140, 0);
+}
+
+a{
+    text-decoration: none;
+}
+
+.c{
+    color: white;
+}
+
+.skl{
+    font-style: italic;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    height: 100%;
+    color: rgb(189, 189, 189);
+    text-align: justify;
+}
+
+h6 {
+    position: absolute;
+    z-index: 999;
+    color: rgb(195, 195, 195);
+    left: 0;
+    margin-top: 20%;
+    margin-left: 50px;
+    padding-left: 10px;
+    width: 30%;
+    font-size: 20px;
+    animation-iteration-count: 1;
+    animation: 1s fadeIn;
+    animation-fill-mode: forwards;
+    transition: all;
+    visibility: hidden;
+    animation-delay: 4s;
+    border-left: 2px solid rgb(255, 140, 0);
+}
