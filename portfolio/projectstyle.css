@@ -32,6 +32,16 @@
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
 }
+  @keyframes fadeBottom {
+    0%  {
+        transform: translateY(100%);
+      }
+    100% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        opacity: 1;
+    }
+}
 
 @keyframes opacity-animation {
     0% {
@@ -88,23 +98,89 @@ head, body
 
 .proj1{
     height: 100%;
-    width: 25%;
+    width: 60%;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     padding-left: 5%;
     align-items: self-start;
-
+    
 }
 
 .proj2{
     height: 100%;
-    width: 75%;
+    width: 40%;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+}
+
+.side-image{
+    /* border: solid red; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    height: 80%;
+}
+
+
+#project-image{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.side-image > span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(transparent ,  #000000);
+    border-radius: 20px;
+
+}
+
+#description {
+    opacity: 0;
+    position: absolute;
+    bottom: 30%;
+    height: auto;
+    line-height: 40px;
+    font-size: 30px;
+    padding-left: 40px;
+    animation-iteration-count: 1;
+    animation: 1s fadeBottom;
+    animation-delay: 0.5s;
+    font-family: RobotoCondensed;
+    animation-fill-mode: forwards;
+    color: rgb(208, 150, 23);
+    transition: all;
+}
+
+#asso_skil{
+    opacity: 0;
+    position: absolute;
+    bottom: 15%;
+    height: auto;
+    line-height: 40px;
+    font-size: 18px;
+    padding-left: 40px;
+    animation-iteration-count: 1;
+    animation: 1s fadeBottom;
+    animation-delay: 0.5s;
+    font-family: RobotoCondensed;
+    animation-fill-mode: forwards;
+    color: rgb(207, 211, 14);
+    transition: all;
+}
+
+#s{
+    color: white;
 }
 
 
@@ -113,17 +189,16 @@ ul{
     list-style: none;
 }
 
-#mini{
+
+.mini{
     z-index: 1000;
     color: white;
-    width: 90%;
-    /* border: solid yellow; */
+    width: 50%;
     padding: 16px;
     height: auto;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    /* margin-left: 15%; */
     font-family: RobotoCondensed;
     transition: all;
     animation-delay: 75ms;
@@ -135,14 +210,14 @@ ul{
 }
 
 
-#mini:hover > #f1{
+.mini:hover > #f1{
     display: block;
     animation: opacity-animations linear 0.5s;
     color: white
 
     /* transition: all; */
 }
-#mini:hover{
+.mini:hover{
     animation: background-animation linear 0.5s forwards;
     /* transition: all; */
 }

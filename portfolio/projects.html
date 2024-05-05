@@ -19,25 +19,104 @@
             <div class="boddy">
                 <div class="background">
                     <div class="proj1">
-                        <h1 id="mini" class="IRC">FT_IRC<div id="f1">-></div></h1>
-                        <h1 id="mini">MINIRT<div id="f1">-></div></h1>
-                        <h1 id="mini">MINIHELL<div id="f1">-></div></h1>
-                        <h1 id="mini">PHILOSOPHERS<div id="f1">-></div></h1>
-                        <h1 id="mini">PUSH_SWAP<div id="f1">-></div></h1>
-                        <h1 id="mini">SO_LONG<div id="f1">-></div></h1>
-                        <h1 id="mini">MINITALK<div id="f1">-></div></h1>
-                        <h1 id="mini">FT_PRINTF<div id="f1">-></div></h1>
-                        <h1 id="mini">LIBFT<div id="f1">-></div></h1>
+                        <h1 id="irc" class="mini">FT_IRC<div id="f1">-></div></h1>
+                        <h1 id="mini" class="mini">MINIRT<div id="f1">-></div></h1>
+                        <h1 id="minish" class="mini">MINIHELL<div id="f1">-></div></h1>
+                        <h1 id="phi" class="mini">PHILOSOPHERS<div id="f1">-></div></h1>
+                        <h1 id="p" class="mini">PUSH_SWAP<div id="f1">-></div></h1>
+                        <h1 id="" class="mini">SO_LONG<div id="f1">-></div></h1>
+                        <h1 id="" class="mini">MINITALK<div id="f1">-></div></h1>
+                        <h1 id="" class="mini">FT_PRINTF<div id="f1">-></div></h1>
+                        <h1 id="" class="mini">LIBFT<div id="f1">-></div></h1>
                     </div>
                     <p id="string"> 
                     </p>
                     <div class="proj2">
-                        <img id="IRC" src="img/minishell.webp" style="width: 70%; height: auto;">
+                        <div class="side-image" id="ft_irc">
+                            <img id="project-image" src="img/server.webp" >
+                            <span></span>
+                            <div id="description">Create my own IRC server in C++, fully compatible with an official client.</div>
+                            <div id="asso_skil"><span id="s">Associated skills :</span> Unix, Network & system administration, Object-oriented programming, Rigor</div>
+                        </div>
+                        <div class="side-image" id="minirt">
+                            <img id="project-image" src="img/minirt.png" >
+                            <span></span>
+                            <div id="description">This project is an introduction to the beautiful world of Raytracing.</div>
+                            <div id="asso_skil"><span id="s">Associated skills :</span> Imperative programming, Algorithms & AI, Graphics, Rigor</div>
+                        </div>
+                        <div class="side-image" id="philo">
+                            <img id="project-image" src="img/philo.png" >
+                            <span></span>
+                            <div id="description">This project is an introduction to the beautiful world of Raytracing.</div>
+                            <div id="asso_skil"><span id="s">Associated skills :</span> Imperative programming, Algorithms & AI, Graphics, Rigor</div>
+                        </div>
+                        <div class="side-image" id="minishel">
+                            <img id="project-image" src="img/minishell.jpeg" >
+                            <span></span>
+                            <div id="description">This project is an introduction to the beautiful world of Raytracing.</div>
+                            <div id="asso_skil"><span id="s">Associated skills :</span> Imperative programming, Algorithms & AI, Graphics, Rigor</div>
+                        </div>
+                        <div class="side-image" id="push">
+                            <img id="project-image" src="img/push_swap.jpeg" >
+                            <span></span>
+                            <div id="description">This project is an introduction to the beautiful world of Raytracing.</div>
+                            <div id="asso_skil"><span id="s">Associated skills :</span> Imperative programming, Algorithms & AI, Graphics, Rigor</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </body>
         <script>
+            const irc = document.getElementById("irc");
+            const img_irc = document.getElementById("ft_irc");
+            irc.addEventListener("mouseover", (e) => {
+                img_irc.style.animation = "opacity-animation 0.5s linear forwards"
+                img_irc.style.display = "flex";
+            });
+            irc.addEventListener("mouseleave", () => {
+                img_irc.style.display = "none";
+            });
+
+            const mini = document.getElementById("mini");
+            const img_mini = document.getElementById("minirt")
+            mini.addEventListener("mouseover", (e) => {
+                img_mini.style.animation = "opacity-animation 0.5s linear forwards"
+                img_mini.style.display = "flex";
+            });
+            mini.addEventListener("mouseleave", () => {
+                img_mini.style.display = "none";
+            });
+
+            const philo = document.getElementById("phi");
+            const img_philo = document.getElementById("philo")
+            philo.addEventListener("mouseover", (e) => {
+                img_philo.style.animation = "opacity-animation 0.5s linear forwards"
+                img_philo.style.display = "flex";
+            });
+            philo.addEventListener("mouseleave", () => {
+                img_philo.style.display = "none";
+            });
+
+            const minis = document.getElementById("minish");
+            const img_minis = document.getElementById("minishel")
+            minis.addEventListener("mouseover", (e) => {
+                img_minis.style.animation = "opacity-animation 0.5s linear forwards"
+                img_minis.style.display = "flex";
+            });
+            minis.addEventListener("mouseleave", () => {
+                img_minis.style.display = "none";
+            });
+
+            const push = document.getElementById("p");
+            const img_push = document.getElementById("push")
+            push.addEventListener("mouseover", (e) => {
+                img_push.style.animation = "opacity-animation 0.5s linear forwards"
+                img_push.style.display = "flex";
+            });
+            push.addEventListener("mouseleave", () => {
+                img_push.style.display = "none";
+            });
+
             let binary = ""
             for (let i = 0; i < 41000; i++){
                 binary += Math.floor(Math.random() * 2) % 2 == 0? '0' : '1';
