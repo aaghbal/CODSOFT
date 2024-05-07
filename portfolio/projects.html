@@ -24,10 +24,9 @@
                         <h1 id="minish" class="mini">MINIHELL<div id="f1">-></div></h1>
                         <h1 id="phi" class="mini">PHILOSOPHERS<div id="f1">-></div></h1>
                         <h1 id="p" class="mini">PUSH_SWAP<div id="f1">-></div></h1>
-                        <h1 id="" class="mini">SO_LONG<div id="f1">-></div></h1>
-                        <h1 id="" class="mini">MINITALK<div id="f1">-></div></h1>
-                        <h1 id="" class="mini">FT_PRINTF<div id="f1">-></div></h1>
-                        <h1 id="" class="mini">LIBFT<div id="f1">-></div></h1>
+                        <h1 id="so_l" class="mini">SO_LONG<div id="f1">-></div></h1>
+                        <h1 id="minit" class="mini">MINITALK<div id="f1">-></div></h1>
+                        <h1 id="prin" class="mini">FT_PRINTF<div id="f1">-></div></h1>
                     </div>
                     <p id="string"> 
                     </p>
@@ -58,6 +57,24 @@
                         </div>
                         <div class="side-image" id="push">
                             <img id="project-image" src="img/push_swap.jpeg" >
+                            <span></span>
+                            <div id="description">This project is an introduction to the beautiful world of Raytracing.</div>
+                            <div id="asso_skil"><span id="s">Associated skills :</span> Imperative programming, Algorithms & AI, Graphics, Rigor</div>
+                        </div>
+                        <div class="side-image" id="sol">
+                            <img id="project-image" src="img/so_long.png" >
+                            <span></span>
+                            <div id="description">This project is an introduction to the beautiful world of Raytracing.</div>
+                            <div id="asso_skil"><span id="s">Associated skills :</span> Imperative programming, Algorithms & AI, Graphics, Rigor</div>
+                        </div>
+                        <div class="side-image" id="minitalk">
+                            <img id="project-image" src="img/minitalk.jpeg" >
+                            <span></span>
+                            <div id="description">This project is an introduction to the beautiful world of Raytracing.</div>
+                            <div id="asso_skil"><span id="s">Associated skills :</span> Imperative programming, Algorithms & AI, Graphics, Rigor</div>
+                        </div>
+                        <div class="side-image" id="printf">
+                            <img id="project-image" src="img/print.jpeg" >
                             <span></span>
                             <div id="description">This project is an introduction to the beautiful world of Raytracing.</div>
                             <div id="asso_skil"><span id="s">Associated skills :</span> Imperative programming, Algorithms & AI, Graphics, Rigor</div>
@@ -115,6 +132,36 @@
             });
             push.addEventListener("mouseleave", () => {
                 img_push.style.display = "none";
+            });
+
+            const sol = document.getElementById("so_l");
+            const img_sol = document.getElementById("sol")
+            sol.addEventListener("mouseover", (e) => {
+                img_sol.style.animation = "opacity-animation 0.5s linear forwards"
+                img_sol.style.display = "flex";
+            });
+            sol.addEventListener("mouseleave", () => {
+                img_sol.style.display = "none";
+            });
+
+            const minitalk = document.getElementById("minit");
+            const img_minitalk = document.getElementById("minitalk")
+            minitalk.addEventListener("mouseover", (e) => {
+                img_minitalk.style.animation = "opacity-animation 0.5s linear forwards"
+                img_minitalk.style.display = "flex";
+            });
+            minitalk.addEventListener("mouseleave", () => {
+                img_minitalk.style.display = "none";
+            });
+
+            const print = document.getElementById("prin");
+            const img_print = document.getElementById("printf")
+            print.addEventListener("mouseover", (e) => {
+                img_print.style.animation = "opacity-animation 0.5s linear forwards"
+                img_print.style.display = "flex";
+            });
+            print.addEventListener("mouseleave", () => {
+                img_print.style.display = "none";
             });
 
             let binary = ""
